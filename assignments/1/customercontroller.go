@@ -23,12 +23,26 @@ func (cc CustomerController) Add(c domain.Customer) {
 
 //GetByID customer
 func (cc CustomerController) GetByID(id string) domain.Customer {
-	return cc.store.GetByID(id)
+	c, err := cc.store.GetByID(id)
+	if err != nil {
+		fmt.Println("Unable to get customer")
+	}
+	return c
 }
 
 //GetAll customers
 func (cc CustomerController) GetAll() {
 	fmt.Println(cc.store.GetAll())
+}
+
+//Update customer
+func (cc CustomerController) Update(c domain.Customer) {
+	err := cc.store.Update(c)
+	if err != nil {
+		fmt.Println("Error: ", err)
+		return
+	}
+	fmt.Println("Customer information updated.")
 }
 
 //Delete customer
@@ -53,6 +67,10 @@ func main() {
 	controller.Add(customer)
 	controller.GetAll()
 	customer = controller.GetByID("cust101")
+	customer.Name = "Shyam Unnithan"
+	controller.Update(customer)
+	fmt.Println(controller.GetByID("cust102"))
+	fmt.Println(controller.GetByID("cust101"))
 	controller.Delete(customer)
 	controller.Add(customer)
 }
