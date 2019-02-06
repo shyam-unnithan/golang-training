@@ -22,6 +22,7 @@
         go get -u
         ```
     * If the package is one which can break past functionality then also change the package for e.g
-        ``` banking/pkg/corebanking v1.0.0
-            banking/pkg/corebanking/v2 v2.0.0
+        ``` 
+        banking/pkg/corebanking v1.0.0
+        banking/pkg/corebanking/v2 v2.0.0
         ```
