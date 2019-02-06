@@ -52,10 +52,10 @@ func (mapStore MapStore) GetAll() map[string]domain.Customer {
 //GetByID customers by id
 func (mapStore MapStore) GetByID(id string) (c domain.Customer, err error) {
 	if _, ok := mapStore.store[id]; !ok {
-		var dc domain.Customer
 		log.Println("Customer Id:", id)
 		log.Println(mapStore.store["1"])
-		return dc, errors.New("Customer not found")
+		err = errors.New("Customer not found")
+		return
 	}
 	return mapStore.store[id], nil
 }
