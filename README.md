@@ -1,13 +1,15 @@
 # Go Lang
 
-[Type Systems](./TypeSystem.md)
+* [Type Systems](./TypeSystem.md)
 
-[Reciever Types](./ReceiverTypes.md)
+* [Reciever Types](./ReceiverTypes.md)
 
-[Interfaces](./Interfaces.md)
+* [Interfaces](./Interfaces.md)
 
-[Packages](./Packages.md)
+* [Packages](./Packages.md)
 
-[Concurrency](./Concurrency.md)
+* [Concurrency](./Concurrency.md)
 
-[Packages](./Packages.md)
+* [Dependency Management](./Dependency.md)
+
+* [Practices](./Practices.md)
