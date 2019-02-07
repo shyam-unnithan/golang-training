@@ -13,3 +13,7 @@
 * [Dependency Management](./Dependency.md)
 
 * [Practices](./Practices.md)
+
+* [Testing](./Testing.md)
+
+* [GRPC](./GRPC.md)
